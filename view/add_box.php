@@ -102,7 +102,8 @@ function anular1(e) {
        }
 
        function selecciona()
-       {       
+       {        
+                document.getElementById('medio').style.display ='none';
                 document.getElementById('numcaja').focus();
                 document.getElementById('numcaja').select();
        }
@@ -117,6 +118,15 @@ function anular1(e) {
         document.getElementById('serie').value='';
         document.getElementById('verifica').value='';
        }
+
+       function cerrarmensaje()
+       {
+         
+        document.getElementById('mensaje').style.display ='none';        
+       document.getElementById('medio').style.display ='';
+      
+
+       }
   
 
 </script>
@@ -127,8 +137,9 @@ function anular1(e) {
 
 
 </head>
-<body onload="selecciona();">
-<div class="main">
+<body onload="selecciona()">
+
+<div class="main" id='main'>
  
 
 
@@ -151,13 +162,31 @@ function anular1(e) {
 </ul>
 
 
+<div id='mensaje'>
+<div class="col-md-10" style="margin:40px;border:solid green 4px; box-shadow:10px 10px 10px #aaa;"> 
+<hr> 
+<h3>"Escanea el codigo de barras de la Caja como se muestra en la imagen"</h3><hr>
+<img src="../images/registro.png" style="height:2%; width:100%; ">
+<hr>
+<button class="btn btn-success" onclick="cerrarmensaje();">CERRAR</button><hr>
+</div>
+</div>
+
+
+
+<div id="medio" >
+
+
+
+
+
 <div  class="col-md-12">
 
       <h2  widht="500">Registro de numero de caja</h2>
       
     </div>
     <div class="clr"></div>
-  </div>
+  
   <div class="clr"></div>
   <div class="body">
     <div class="body_resize">
@@ -211,6 +240,10 @@ function anular1(e) {
 </div>
 </footer>
 
+
+
+
+</div>
 
 
 
