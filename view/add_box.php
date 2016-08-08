@@ -82,6 +82,14 @@ function anular1(e) {
 
       function validavacio(){
         campo=document.getElementById("numcaja").value;
+
+
+        document.getElementById('numcaja').disabled= false;
+        document.getElementById('serie').disabled= false;
+        document.getElementById('verifica').disabled= false;
+
+        
+
         if(campo.length==0){
             alert(" 1. Numero de caja Es necesario que tenga información");
             return false;
@@ -97,6 +105,9 @@ function anular1(e) {
           alert("3. Numero de caja erroneo");
           return false;
         }
+        
+
+
        
 
        }
@@ -124,7 +135,8 @@ function anular1(e) {
          
         document.getElementById('mensaje').style.display ='none';        
        document.getElementById('medio').style.display ='';
-      
+       document.getElementById('numcaja').focus();
+                document.getElementById('numcaja').select();
 
        }
   
